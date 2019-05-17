@@ -33,7 +33,7 @@ setup(
 #                        "beautifulsoup4>=1.0",
     # Maybe you need access to a script in another repo for your package. Here's how you do that:
 #                        "package2"],
-#    dependency_links = ["git+ssh://git@grit.stsci.edu/NIRISS/package2.git#egg=catz-0.0.1"],
+#    dependency_links = ["git+ssh://git@grit.stsci.edu/NIRISS/package2.git#egg=package2-0.0.1"],
     # If you need something from github, any of the below formats work:
 #    dependency_links = ["git+ssh://git@github.com/npirzkal/GRISMCONF.git#egg=GRISMCONF-0.1"],
 #    dependency_links = ["git+git@github.com:npirzkal/NIRCAM_Gsim@master#egg=NIRCAM_Gsim-0.1"],
