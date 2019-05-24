@@ -6,9 +6,10 @@
 # packages needed for your package. Ask someone about this before doing it!
 
 from setuptools import setup, find_packages
+import glob
 
 setup(
-    name = "mypackagename",
+    name = "CHANGEME",
     version = "0.0.1",
     description = "My package does this really cool thing",
     author = "Jo Taylor",
@@ -21,18 +22,21 @@ setup(
                    'Topic :: Scientific/Engineering :: Astronomy',
                    'Topic :: Scientific/Engineering :: Physics',
                    'Topic :: Software Development :: Libraries :: Python Modules'],
+    py_modules = [x.split(".py")[0] for x in glob.glob("*py") if "setup.py" not in x],
 	packages = find_packages(),
     # Specify necessary, but minimal, requirements needed to run. 
     # Only specify version numbers if you know some versions will break your code.
     # An example of how to make another git repo a dependency of your package:
     install_requires = ["setuptools",
                         "numpy",
-                        "astropy"],
+                        "astropy",
 #   This is just to show you how to specify version numbers
 #                        "matplotlib>=3.0.0,<3.1.0",
 #                        "beautifulsoup4>=1.0",
     # Maybe you need access to a script in another repo for your package. Here's how you do that:
-#                        "package2"],
+#                        "package2",
+                        ]
+    # Maybe you need access to a script in another repo for your package. Here's how you do that:
 #    dependency_links = ["git+ssh://git@grit.stsci.edu/NIRISS/package2.git#egg=package2-0.0.1"],
     # If you need something from github, any of the below formats work:
 #    dependency_links = ["git+ssh://git@github.com/npirzkal/GRISMCONF.git#egg=GRISMCONF-0.1"],
