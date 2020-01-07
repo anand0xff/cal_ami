@@ -23,7 +23,9 @@ setup(
                    'Topic :: Scientific/Engineering :: Physics',
                    'Topic :: Software Development :: Libraries :: Python Modules'],
     py_modules = [x.split(".py")[0] for x in glob.glob("*py") if "setup.py" not in x],
-	packages = find_packages(),
+    # Only uncomment the below line if you are creating a package 
+    # (with a package directory scheme and __init__.py)
+#	packages = find_packages(),
     # Specify necessary, but minimal, requirements needed to run. 
     # Only specify version numbers if you know some versions will break your code.
     # An example of how to make another git repo a dependency of your package:
